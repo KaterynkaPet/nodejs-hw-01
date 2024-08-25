@@ -7,4 +7,7 @@ export const getAllContacts = async () => {
     return JSON.parse(data);
 };
 
-//console.log(await getAllContacts());
+if (process.argv[1].endsWith('getAllContacts.js')) {
+    const contacts = await getAllContacts();
+    console.log(contacts);
+}
